@@ -1,0 +1,17 @@
+<?php
+/**
+ * GET /
+ *
+ * The index page, which is just a link to static/index.html
+ */
+
+namespace Controllers;
+
+require_once 'Skye/autoload.php';
+
+
+class Index extends \Skye\Controller {
+	public function render(\Skye\Request $req, \Skye\Response $res): bool {
+		return $res->staticfile('index.html');
+	}
+}
